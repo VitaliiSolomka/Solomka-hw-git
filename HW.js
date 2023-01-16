@@ -149,3 +149,23 @@ switch (operator){
         console.log('Введіть знак математичної операції: "+", "-", "*", "/"')
         break;
 }
+
+/* 8.  Використовуючи властивості рядків (тип string), та регулярний вираз (regular expression) видалити голосні букви зі слова.
+*/
+
+let word = 'SomesAEadwiiiiqetuAEYUIOaayoaaayuieee';
+let letterA = word.replace(/a/g,'');
+let letterE = letterA.replace(/e/g,'')
+let letterY = letterE.replace(/y/g,'')
+let letterU = letterY.replace(/u/g,'')
+let letterI = letterU.replace(/i/g,'')
+let letterO = letterI.replace(/o/g,'')
+let letterAa = letterO.replace(/A/g,'');
+let letterEe = letterAa.replace(/E/g,'')
+let letterYy = letterEe.replace(/Y/g,'')
+let letterUu = letterYy.replace(/U/g,'')
+let letterIi = letterUu.replace(/I/g,'')
+let letterOo = letterIi.replace(/O/g,'')
+console.log(letterOo)
+
+// Сделал так, но мне совсем не нравиться)
