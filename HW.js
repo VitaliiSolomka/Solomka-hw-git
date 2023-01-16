@@ -169,3 +169,36 @@ let letterOo = letterIi.replace(/O/g,'')
 console.log(letterOo)
 
 // Сделал так, но мне совсем не нравиться)
+
+/*
+9.  Використовуючи оператор if реалізувати логіку переводу метрів в кілометри,
+    так щоб в консоль виводився результат обчислень з правильним закінченням.
+    Наприклад: 1000 метрів це 1 кілометр;  32 метри це 0,032 кілометра; 3 кілометри і т.д.
+
+    Відмінювання для "метр" (аналогічні закінчення будуть і для слова "кілометр")
+
+    Підказка(https://ukr-lifehacks.ed-era.com/rozdil-9/zvyazok_chislivnykiv)
+*/
+
+
+
+let meters = '120123 метрів';
+
+let metersParseNum = parseInt(meters.match(/\d+/))
+let metersParseWord = meters.split(' ').pop();
+let tranferToKilometers = (metersParseNum / 1000)
+let lastNumber = tranferToKilometers.toString().split('').pop();
+let titleOfKilometers = null;
+
+if (metersParseWord == 'метр' || metersParseWord == 'метри' || metersParseWord == 'метрів') {
+    if (lastNumber == 1){
+        titleOfKilometers = 'кілометр';
+    }
+    else if (lastNumber == (2 || 3 || 4)) {
+        titleOfKilometers = 'кілометри';
+    }
+    else {
+        titleOfKilometers = 'кілометрів'
+    }
+}
+console.log(metersParseNum + " " + metersParseWord + " це " + tranferToKilometers + " " + titleOfKilometers)
