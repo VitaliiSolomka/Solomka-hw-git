@@ -18,9 +18,9 @@ if (burger > 3 && potatoFree > 0) {
 /* 2. Напишіть умовну конструкцію if, що перевіряє, чи знаходиться значення ціни товару між 1000 та 1900 включно.
     Результат виводити в консоль.
 */
-let productPrice = 1901
+let productPrice = 1901;
 
-if (productPrice > 1000 && productPrice <= 1900 ) {
+if (productPrice >= 1000 && productPrice <= 1900 ) {
     console.log("Ціна товару знаходить в межах між 1000 і 1900 включно. Ціна за товар: " + productPrice)
 } else if (productPrice > 1900) {
     console.log("Ціна більше за 1900. Ціна за товар: " + productPrice)
@@ -33,16 +33,15 @@ if (productPrice > 1000 && productPrice <= 1900 ) {
     Результат виводити в консоль.
 */
 
-let productPrice1 = 100;
-let productStatus1 = (productPrice1 > 1000 && productPrice1 < 1900)
+let productPrice1 = 1900;
 
-if (!productStatus1) {
+if (!(productPrice1 >= 1000 && productPrice1 <= 1900)) {
     console.log ("Ціна товару знаходить за межами 1000 і 1900 включно. Ціна за товар: " + productPrice1)
 } else (
     console.log("Ціна товару знаходить в межах між 1000 і 1900 включно. Ціна за товар: " + productPrice1)
 );
 
-(productPrice1 > 1000 && productPrice1 < 1900) ? console.log("Ціна товару знаходить в межах між 1000 і 1900 включно. Ціна за товар: " + productPrice1) : console.log ("Ціна товару знаходить за межами 1000 і 1900 включно. Ціна за товар: " + productPrice1);
+(productPrice1 >= 1000 && productPrice1 <= 1900) ? console.log("Ціна товару знаходить в межах між 1000 і 1900 включно. Ціна за товар: " + productPrice1) : console.log ("Ціна товару знаходить за межами 1000 і 1900 включно. Ціна за товар: " + productPrice1);
 
 /* 4. За номером пори року вивести назву цієї пори року використовуючи оператор if-else-if
     Результат виводити в консоль.
@@ -154,19 +153,8 @@ switch (operator){
 */
 
 let word = 'SomesAEadwiiiiqetuAEYUIOaayoaaayuieee';
-let letterA = word.replace(/a/g,'');
-let letterE = letterA.replace(/e/g,'')
-let letterY = letterE.replace(/y/g,'')
-let letterU = letterY.replace(/u/g,'')
-let letterI = letterU.replace(/i/g,'')
-let letterO = letterI.replace(/o/g,'')
-let letterAa = letterO.replace(/A/g,'');
-let letterEe = letterAa.replace(/E/g,'')
-let letterYy = letterEe.replace(/Y/g,'')
-let letterUu = letterYy.replace(/U/g,'')
-let letterIi = letterUu.replace(/I/g,'')
-let letterOo = letterIi.replace(/O/g,'')
-console.log(letterOo)
+let wordNoVowels = word.replace(/[a,e,y,u,i,o,A,E,Y,U,I,O]/g,'');
+console.log(wordNoVowels)
 
 // Сделал так, но мне совсем не нравиться)
 
