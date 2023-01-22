@@ -168,25 +168,47 @@ console.log(wordNoVowels)
     Підказка(https://ukr-lifehacks.ed-era.com/rozdil-9/zvyazok_chislivnykiv)
 */
 
-
-
-let meters = '120123 метрів';
-
-let metersParseNum = parseInt(meters.match(/\d+/))
-let metersParseWord = meters.split(' ').pop();
-let tranferToKilometers = (metersParseNum / 1000)
+let meters = 126000;
+let tranferToKilometers = (meters / 1000);
 let lastNumber = tranferToKilometers.toString().split('').pop();
-let titleOfKilometers = null;
-
-if (metersParseWord == 'метр' || metersParseWord == 'метри' || metersParseWord == 'метрів') {
-    if (lastNumber == 1){
-        titleOfKilometers = 'кілометр';
-    }
-    else if (lastNumber == (2 || 3 || 4)) {
-        titleOfKilometers = 'кілометри';
+let twoLastNumber = tranferToKilometers.toString().slice(-2);
+if (Number.isInteger(tranferToKilometers)) {
+    if (twoLastNumber == (11 || 12 || 13 || 14)) {
+        console.log("Виходить: " + tranferToKilometers + " кілометрів");
     }
     else {
-        titleOfKilometers = 'кілометрів'
+        if (lastNumber == 1){
+            console.log("Виходить: " + tranferToKilometers + " кілометр");
+        }
+        else if (lastNumber == (2 || 3 || 4)) {
+            console.log("Виходить: " + tranferToKilometers + " кілометра");
+        }
+        else {
+            console.log("Виходить: " + tranferToKilometers + " кілометрів");
+        }
     }
+   
 }
-console.log(metersParseNum + " " + metersParseWord + " це " + tranferToKilometers + " " + titleOfKilometers)
+else {
+    console.log("Виходить: " + tranferToKilometers + " кілометра")
+}
+
+
+// let metersParseNum = parseInt(meters.match(/\d+/))
+// let metersParseWord = meters.split(' ').pop();
+// let tranferToKilometers = (metersParseNum / 1000)
+// let lastNumber = tranferToKilometers.toString().split('').pop();
+// let titleOfKilometers = null;
+
+// if (metersParseWord == 'метр' || metersParseWord == 'метри' || metersParseWord == 'метрів') {
+//     if (lastNumber == 1){
+//         titleOfKilometers = 'кілометр';
+//     }
+//     else if (lastNumber == (2 || 3 || 4)) {
+//         titleOfKilometers = 'кілометри';
+//     }
+//     else {
+//         titleOfKilometers = 'кілометрів'
+//     }
+// }
+// console.log(metersParseNum + " " + metersParseWord + " це " + tranferToKilometers + " " + titleOfKilometers)
