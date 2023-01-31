@@ -6,9 +6,6 @@
 (Змінні типу інтеджер містять кількість продуктів в наявності у вигляді вхідних даних)
 */
 
-let burger = null;
-let potatoFree = null;
-
 function eatOrNot(burger, potatoFree) {
     if (burger > 3 && potatoFree > 0) {
         console.log ("Ми поїли")
@@ -22,8 +19,6 @@ eatOrNot(4, 1)
 /* 2. Напишіть умовну конструкцію if, що перевіряє, чи знаходиться значення ціни товару між 1000 та 1900 включно.
     Результат виводити в консоль.
 */
-let productPrice = null;
-
 function priceOfProduct(productPrice) {
     if (productPrice >= 1000 && productPrice <= 1900 ) {
         console.log("Ціна товару знаходить в межах між 1000 і 1900 включно. Ціна за товар: " + productPrice)
@@ -40,8 +35,6 @@ priceOfProduct (1901)
     Реалізуйте два варіанти, один з оператором НЕ !, а інший без цього оператора.
     Результат виводити в консоль.
 */
-
-let productPrice1 = null;
 
 function priceOfProduct1(productPrice1) {
     if (!(productPrice1 >= 1000 && productPrice1 <= 1900)) {
@@ -88,10 +81,6 @@ seasonNumber(2)
     Результат виводити в консоль.
 */
     
-let a = null;
-let b = null;
-let c = null;
-
 function middleNumber(a, b, c) {
     if ((c > b && a > c || c > a && b > c) && a != b && a != c && b != c) {
         console.log ("Середнє число між a, b, c є число c: " + c) 
@@ -110,8 +99,6 @@ middleNumber(21,15,14)
     За заданим номером вивести назву дня тижня використовуючи switch.
     Результат виводити в консоль.
 */
-
-let dayNumber = null;
 
 function dayNumber1(dayNumber) {
     switch (dayNumber) {
@@ -149,12 +136,6 @@ dayNumber1(2)
     Математичні операції для обчислення: "+", "-", "*", "/".
     Результат виводити в консоль.
 */
-
-let operator = null;
-
-let numberA = null;
-let numberB = null;
-let numberSum = null;
 
 function mathOperation(operator,numberA,numberB) {
     switch (operator){
@@ -205,8 +186,6 @@ removeVowels('AEYUIOQaeyuio')
 
     Підказка(https://ukr-lifehacks.ed-era.com/rozdil-9/zvyazok_chislivnykiv)
 */
-
-let meters = null;
 
 function tranferMeters(meters) {
     let tranferToKilometers = (meters / 1000);
