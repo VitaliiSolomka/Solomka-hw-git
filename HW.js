@@ -18,9 +18,9 @@ if (burger > 3 && potatoFree > 0) {
 /* 2. Напишіть умовну конструкцію if, що перевіряє, чи знаходиться значення ціни товару між 1000 та 1900 включно.
     Результат виводити в консоль.
 */
-let productPrice = 1901
+let productPrice = 1901;
 
-if (productPrice > 1000 && productPrice <= 1900 ) {
+if (productPrice >= 1000 && productPrice <= 1900 ) {
     console.log("Ціна товару знаходить в межах між 1000 і 1900 включно. Ціна за товар: " + productPrice)
 } else if (productPrice > 1900) {
     console.log("Ціна більше за 1900. Ціна за товар: " + productPrice)
@@ -33,16 +33,15 @@ if (productPrice > 1000 && productPrice <= 1900 ) {
     Результат виводити в консоль.
 */
 
-let productPrice1 = 100;
-let productStatus1 = (productPrice1 > 1000 && productPrice1 < 1900)
+let productPrice1 = 1900;
 
-if (!productStatus1) {
+if (!(productPrice1 >= 1000 && productPrice1 <= 1900)) {
     console.log ("Ціна товару знаходить за межами 1000 і 1900 включно. Ціна за товар: " + productPrice1)
 } else (
     console.log("Ціна товару знаходить в межах між 1000 і 1900 включно. Ціна за товар: " + productPrice1)
 );
 
-(productPrice1 > 1000 && productPrice1 < 1900) ? console.log("Ціна товару знаходить в межах між 1000 і 1900 включно. Ціна за товар: " + productPrice1) : console.log ("Ціна товару знаходить за межами 1000 і 1900 включно. Ціна за товар: " + productPrice1);
+(productPrice1 >= 1000 && productPrice1 <= 1900) ? console.log("Ціна товару знаходить в межах між 1000 і 1900 включно. Ціна за товар: " + productPrice1) : console.log ("Ціна товару знаходить за межами 1000 і 1900 включно. Ціна за товар: " + productPrice1);
 
 /* 4. За номером пори року вивести назву цієї пори року використовуючи оператор if-else-if
     Результат виводити в консоль.
@@ -150,7 +149,66 @@ switch (operator){
         break;
 }
 
-/* 8. Використовуючи властивості рядків (тип string), та регулярний вираз (regular expression) видалити голосні букви зі слова.
+/* 8.  Використовуючи властивості рядків (тип string), та регулярний вираз (regular expression) видалити голосні букви зі слова.
 */
 
+let word = 'SomesAEadwiiiiqetuAEYUIOaayoaaayuieee';
+let wordNoVowels = word.replace(/[a,e,y,u,i,o,A,E,Y,U,I,O]/g,'');
+console.log(wordNoVowels)
 
+// Сделал так, но мне совсем не нравиться)
+
+/*
+9.  Використовуючи оператор if реалізувати логіку переводу метрів в кілометри,
+    так щоб в консоль виводився результат обчислень з правильним закінченням.
+    Наприклад: 1000 метрів це 1 кілометр;  32 метри це 0,032 кілометра; 3 кілометри і т.д.
+
+    Відмінювання для "метр" (аналогічні закінчення будуть і для слова "кілометр")
+
+    Підказка(https://ukr-lifehacks.ed-era.com/rozdil-9/zvyazok_chislivnykiv)
+*/
+
+let meters = 126000;
+let tranferToKilometers = (meters / 1000);
+let lastNumber = tranferToKilometers.toString().split('').pop();
+let twoLastNumber = tranferToKilometers.toString().slice(-2);
+if (Number.isInteger(tranferToKilometers)) {
+    if (twoLastNumber == (11 || 12 || 13 || 14)) {
+        console.log("Виходить: " + tranferToKilometers + " кілометрів");
+    }
+    else {
+        if (lastNumber == 1){
+            console.log("Виходить: " + tranferToKilometers + " кілометр");
+        }
+        else if (lastNumber == (2 || 3 || 4)) {
+            console.log("Виходить: " + tranferToKilometers + " кілометра");
+        }
+        else {
+            console.log("Виходить: " + tranferToKilometers + " кілометрів");
+        }
+    }
+   
+}
+else {
+    console.log("Виходить: " + tranferToKilometers + " кілометра")
+}
+
+
+// let metersParseNum = parseInt(meters.match(/\d+/))
+// let metersParseWord = meters.split(' ').pop();
+// let tranferToKilometers = (metersParseNum / 1000)
+// let lastNumber = tranferToKilometers.toString().split('').pop();
+// let titleOfKilometers = null;
+
+// if (metersParseWord == 'метр' || metersParseWord == 'метри' || metersParseWord == 'метрів') {
+//     if (lastNumber == 1){
+//         titleOfKilometers = 'кілометр';
+//     }
+//     else if (lastNumber == (2 || 3 || 4)) {
+//         titleOfKilometers = 'кілометри';
+//     }
+//     else {
+//         titleOfKilometers = 'кілометрів'
+//     }
+// }
+// console.log(metersParseNum + " " + metersParseWord + " це " + tranferToKilometers + " " + titleOfKilometers)
